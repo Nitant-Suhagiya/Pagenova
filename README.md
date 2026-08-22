@@ -525,11 +525,6 @@ See [PRIVACY.md](PRIVACY.md) for the full policy. Highlights:
   validates redirects, and blocks private/loopback/link-local hosts (including
   IPv6) before fetching.
 
-For the Chrome Web Store submission checklist, permission justifications, and
-listing copy, see [STORE.md](STORE.md).
-
----
-
 ## Project structure
 
 ```
@@ -545,7 +540,7 @@ browser-ai-assistant/
 ├── options.html              settings host
 ├── help.html                 in-app guide host
 ├── offscreen.html            embedding worker host
-├── README.md / PRIVACY.md / DESIGN.md / STORE.md
+├── README.md / CONTRIBUTING.md / PRIVACY.md / DESIGN.md
 ├── LICENSE                   MIT license
 ├── .github/workflows/ci.yml  lint + test + build on push/PR
 ├── scripts/fix-loader.js     post-build service-worker fixup
@@ -635,23 +630,8 @@ so the jsdom opt-in is structural rather than a per-file pragma.
 
 ## Contributing
 
-Contributions are welcome. Small fixes, documentation corrections, tests, and
-provider improvements are all useful.
-
-For a substantial change, open an issue first and explain the problem you want
-to solve. That gives maintainers and contributors a chance to agree on the
-scope before anyone spends time on an overlapping implementation.
-
-1. Fork the repository and create a branch from the default branch.
-2. Make the change and keep the pull request focused on one concern.
-3. Run `npm run lint`, `npm test`, and `npm run build` before opening the pull
-   request.
-4. Describe the user-visible effect, tests run, and any follow-up work in the
-   pull request body.
-
-Do not include API keys, private documents, screenshots with sensitive data, or
-other credentials in issues, commits, or pull requests. The project uses the
-[MIT License](LICENSE).
+See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, checks, and pull-request
+guidance. The project uses the [MIT License](LICENSE).
 
 ---
 
