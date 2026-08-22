@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Pagenova",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Browser-native AI assistant with chat, page context and local/cloud providers.",
   "permissions": ["sidePanel", "storage", "activeTab", "tabs", "scripting", "contextMenus", "offscreen"],
   "host_permissions": [
