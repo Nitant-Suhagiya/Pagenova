@@ -14,9 +14,9 @@ Pagenova is open source under the [MIT License](LICENSE). Contributions are
 welcome, whether you are fixing a bug, improving a provider integration, or
 making the extension easier to use.
 
-> **User documentation:** [guide](https://nitant-suhagiya.github.io/pagenova/),
-> [privacy policy](https://nitant-suhagiya.github.io/pagenova/privacy.html), and
-> [support](https://nitant-suhagiya.github.io/pagenova/support.html). Source:
+> **User documentation:** [guide](https://nitant-suhagiya.github.io/Pagenova/),
+> [privacy policy](https://nitant-suhagiya.github.io/Pagenova/privacy.html), and
+> [support](https://nitant-suhagiya.github.io/Pagenova/support.html). Source:
 > [docs/index.html](docs/index.html).
 
 ---
