@@ -14,9 +14,9 @@ Pagenova is open source under the [MIT License](LICENSE). Contributions are
 welcome, whether you are fixing a bug, improving a provider integration, or
 making the extension easier to use.
 
-> **User documentation:** the static documentation portal lives in
-> [docs/index.html](docs/index.html). Open it locally now; publish the `docs/`
-> directory with GitHub Pages when the repository is created.
+> **User documentation:** the static documentation source lives in
+> [docs/index.html](docs/index.html). GitHub Pages can publish `main/docs` when
+> it is enabled in the repository settings.
 
 ---
 
@@ -25,7 +25,7 @@ making the extension easier to use.
 1. [Features](#features)
 2. [Requirements](#requirements)
 3. [Quickstart](#quickstart)
-4. [Build & load](#build--load)
+4. [Build & verify](#build--verify)
 5. [Setup](#setup)
    - [Ollama (local models)](#ollama-local-models)
    - [Cloud providers](#cloud-providers)
@@ -416,10 +416,11 @@ providers and RAG)
 - `imageUrl.ts`: `imageUrlToDataUrl()` accepts bounded HTTPS image responses,
   validates every redirect, and blocks private-host ranges before fetching.
 
-**Content scripts**: `extractText.ts` (strips `script/style/noscript/nav/
-footer/aside/iframe/svg`, collapses whitespace, caps at 250,000 chars) and
-`extractImages.ts` (collects prominent `<img>`/`<canvas>` ≥ 50×50px, top 9 by
-area).
+**On-demand page extraction** (`background/extract.ts`): injected functions
+strip `script/style/noscript/nav/footer/aside/iframe/svg`, collapse whitespace,
+and cap page text at 250,000 characters. They also collect prominent
+`<img>`/`<canvas>` elements (at least 50×50px, top 9 by area) and can read the
+current text selection when you send a question.
 
 **RAG pipeline**: see [RAG internals](#rag-internals).
 
@@ -554,7 +555,7 @@ browser-ai-assistant/
     │   ├── providers/        ollama, openai, anthropic, gemini, openaiCompatible, registry, types
     │   ├── rag/              chunk, embed, vectorStore, retrieve, documents, types
     │   ├── images/           encode.ts (resize/compress)
-    │   ├── storage/          history.ts (IndexedDB sessions)
+    │   ├── storage/          credentials.ts (session-only keys), history.ts (IndexedDB sessions)
     │   ├── web/              search.ts (DuckDuckGo / Tavily)
     │   ├── prompt.ts         system prompt + [SESSION] header
     │   └── messaging.ts      typed message contracts
@@ -593,7 +594,7 @@ enforced rather than assumed.
 npm test
 ```
 
-117 tests across 21 files, covering:
+121 tests across 22 files, covering:
 
 - **RAG**: chunking (size bounds + overlap), cosine similarity (identity,
   orthogonal, dimension-mismatch skip), CJK-aware token estimation, retrieval
@@ -688,7 +689,7 @@ other credentials in issues, commits, or pull requests. The project uses the
 | UI | Theme toggle | Dark/light persists |
 | UI | Plus menu | Opens up, closes on outside click |
 | UI | Expand / collapse | Context tab preserved |
-| Settings | Clear stored data | Settings + history + index all wiped |
+| Settings | Clear stored data | Settings, session keys, history, and index all wiped |
 | Prompt | Edit system prompt | Used verbatim for every provider, no trimming |
 | Prompt | Upgrade from older build (legacy one-liner stored) | Migrates to the full prompt without touching other settings |
 | Context | Select many very long tabs | "Truncated to fit (N sources)" pill, header marks content omitted |
@@ -723,8 +724,8 @@ other credentials in issues, commits, or pull requests. The project uses the
 
 ### Later
 - **Provider comparison mode**: same prompt/image to two providers side-by-side.
-- **Uncertainty display**: ensemble local vision models on one image, surface
-  agreement/disagreement.
+- **MCP compatibility**: connect Pagenova to Model Context Protocol servers
+  for optional tools and external context.
 - **Voice input**: Web Speech API for dictating questions.
 - **PDF page-render-as-image**: offer page renders as vision attachments for
   scanned/figure-heavy docs.

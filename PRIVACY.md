@@ -3,8 +3,8 @@
 **Effective date:** August 2026
 
 Pagenova is a browser extension that answers questions with AI models. You can
-optionally include tabs, documents, and images as context. This policy explains
-what the extension stores, reads, and sends.
+optionally include tabs, selected text, documents, screenshots, and images as
+context. This policy explains what the extension stores, reads, and sends.
 
 ## Data stored locally
 
@@ -19,18 +19,20 @@ what the extension stores, reads, and sends.
   history.
 - The optional in-browser embedding model downloads from Hugging Face on first
   use and is cached locally. Text used to make embeddings stays on your device.
-- "Clear stored data" in Settings removes this local data.
+- "Clear stored data" in Settings removes local and session storage, chat
+  history, and RAG index data.
 
 ## Data sent to third parties
 
 Pagenova sends data outside your device only when you start an action that uses
 an external service:
 
-- Your prompt, along with any page text, document, or image you select or
-  attach, is sent to the AI provider you choose: a local Ollama server, OpenAI,
-  Anthropic, Google Gemini, or an OpenAI-compatible endpoint you configure. To
-  support follow-up questions about an image, Pagenova may send the most recent
-  image attachment again within the same conversation.
+- Your prompt, along with any page text, selected text, document, screenshot,
+  or image you select or attach, is sent to the AI provider you choose: a local
+  Ollama server, OpenAI, Anthropic, Google Gemini, or an OpenAI-compatible
+  endpoint you configure. To support follow-up questions about an image,
+  Pagenova may send the most recent image attachment again within the same
+  conversation.
 - If you turn on web search, Pagenova sends your question to DuckDuckGo or
   Tavily. For a follow-up such as "search it," it also sends up to two recent
   user questions so the search provider can identify the subject. This applies
@@ -70,4 +72,5 @@ These permissions are used solely for the features described above.
 
 ## Contact
 
-For questions about this policy, open an issue in the project repository.
+For questions about this policy, open an issue at
+<https://github.com/Nitant-Suhagiya/pagenova/issues>.

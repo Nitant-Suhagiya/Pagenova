@@ -90,7 +90,8 @@ Pagenova limits how it uses that access:
 
 ## 5. Assets to upload
 
-These are not in the repo and must be provided in the developer dashboard:
+Prepared assets are in `store-assets/`. Upload them manually in the developer
+dashboard:
 
 - **Icon 128×128** (required; PNG).
 - **Screenshots**: upload the four prepared 1280×800 images from
