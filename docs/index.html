@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pagenova documentation: installation, providers, context, vision, web search, privacy, and troubleshooting." />
+    <title>Pagenova documentation</title>
+    <link rel="stylesheet" href="assets/docs.css" />
+    <script defer src="assets/docs.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to documentation</a>
+    <div class="site-shell">
+      <aside class="sidebar" id="site-nav" aria-label="Documentation navigation">
+        <a class="brand" href="#overview" aria-label="Pagenova documentation home">
+          <img class="brand-logo" src="assets/pagenova-logo.png" alt="" />
+        </a>
+        <p class="sidebar-kicker">Documentation</p>
+        <nav>
+          <p class="nav-label">Get started</p>
+          <a href="#overview">Overview</a><a href="#install">Install Pagenova</a><a href="#ollama">Set up Ollama</a>
+          <p class="nav-label">Use Pagenova</p>
+          <a href="#chat">Chat and history</a><a href="#context">Page, tab, and file context</a><a href="#vision">Images and screenshots</a><a href="#search">Web search</a>
+          <p class="nav-label">Reference</p>
+          <a href="#providers">Providers and models</a><a href="#privacy">Privacy and permissions</a><a href="#troubleshooting">Troubleshooting</a>
+        </nav>
+        <div class="sidebar-footer"><a href="privacy.html">Privacy policy</a><a href="support.html">Support</a></div>
+      </aside>
+
+      <div class="content-shell">
+        <header class="topbar">
+          <button class="icon-button nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open documentation navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg></button>
+          <div class="topbar-meta"><span class="status-dot" aria-hidden="true"></span> Chrome and Brave</div>
+          <div class="search-wrap">
+            <label class="sr-only" for="docs-search">Search documentation</label>
+            <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="m16 16 4 4" /></svg>
+            <input id="docs-search" type="search" placeholder="Search documentation" autocomplete="off" aria-controls="search-results" aria-expanded="false" />
+            <kbd>/</kbd><div class="search-results" id="search-results" role="listbox" aria-label="Documentation search results" hidden></div>
+          </div>
+          <button class="icon-button theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg></button>
+        </header>
+
+        <main id="main-content">
+          <section class="hero content-section" id="overview" data-search="overview what is pagenova browser ai assistant ollama cloud providers chat tabs documents images web search">
+            <div class="eyebrow"><span></span> Pagenova documentation</div>
+            <div class="hero-grid">
+              <div>
+                <h1>Ask better questions about the page in front of you.</h1>
+                <p class="lede">Pagenova is a Chrome and Brave side-panel assistant. Ground a conversation in selected text, tabs, files, screenshots, and optional web search, then choose a local or cloud model.</p>
+                <div class="hero-actions"><a class="button primary" href="#install">Start here <span aria-hidden="true">→</span></a><a class="button secondary" href="#context">Learn about context</a></div>
+              </div>
+              <div class="product-card" aria-label="Illustration of the Pagenova chat flow">
+                <div class="mock-topbar"><img class="mock-logo" src="assets/pagenova-logo.png" alt="" /><span></span><i></i><i></i><i></i></div>
+                <div class="mock-selects"><span>Ollama</span><span>llama3.2:1b</span></div><p class="mock-pill">Selected text · 1 source</p>
+                <div class="mock-user">What does this paragraph mean?</div><div class="mock-assistant"><strong>It explains the context you selected.</strong><br />Pagenova sends only the current selection with this answer.</div><div class="mock-input"><span>+</span><span>Ask a question...</span></div>
+              </div>
+            </div>
+            <div class="quick-grid" aria-label="Quick links">
+              <a href="#ollama"><span class="quick-number">01</span><strong>Use a local model</strong><small>Configure Ollama once, then select a model.</small></a>
+              <a href="#context"><span class="quick-number">02</span><strong>Give it context</strong><small>Highlight text, select tabs, or attach a file.</small></a>
+              <a href="#vision"><span class="quick-number">03</span><strong>Ask about an image</strong><small>Attach, paste, or capture a normal webpage.</small></a>
+            </div>
+          </section>
+
+          <section class="content-section article-section" id="install" data-search="install setup chrome web store brave pin toolbar extension">
+            <div class="section-heading"><p class="section-number">01</p><div><h2>Install Pagenova</h2><p>Install Pagenova from the Chrome Web Store, then open it from your browser toolbar.</p></div></div>
+            <div class="callout note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 10v6M12 7h.01" /></svg><p>Pagenova currently requires Chrome 116 or later. Brave is supported as a Chromium browser. Firefox is not currently supported.</p></div>
+            <ol class="steps">
+              <li><span>1</span><div><strong>Add Pagenova.</strong><p>Open the Pagenova listing in the Chrome Web Store and choose <b>Add to Chrome</b>. Brave users can install it from the same listing.</p></div></li>
+              <li><span>2</span><div><strong>Pin Pagenova.</strong><p>Open the browser extensions menu and pin Pagenova to your toolbar.</p></div></li>
+              <li><span>3</span><div><strong>Open the side panel.</strong><p>Open a normal webpage, then select the Pagenova toolbar icon.</p></div></li>
+            </ol>
+          </section>
+
+          <section class="content-section article-section" id="ollama" data-search="ollama localhost 11434 CORS origins 403 connection local model pull windows mac linux">
+            <div class="section-heading"><p class="section-number">02</p><div><h2>Set up Ollama</h2><p>Ollama keeps model inference on your machine. Pagenova connects to <code>http://localhost:11434</code> by default.</p></div></div>
+            <div class="split-grid">
+              <div class="surface-card"><h3>1. Install and pull a model</h3><p>Install Ollama, then pull a text model. Pull a vision model only if you plan to ask about images.</p><pre><code>ollama pull llama3.2:1b<br />ollama pull llava</code></pre></div>
+              <div class="surface-card"><h3>2. Allow Pagenova’s origin</h3><p>Ollama must allow the extension origin for pulls and embeddings. Copy Pagenova’s exact origin from Settings.</p><pre><code>setx OLLAMA_ORIGINS "chrome-extension://&lt;extension-id&gt;"</code></pre><p class="muted">Windows: restart the Ollama app after setting the variable. macOS/Linux: run <code>OLLAMA_ORIGINS="chrome-extension://&lt;extension-id&gt;" ollama serve</code>.</p></div>
+            </div>
+            <div class="callout warning"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 10 18H2L12 3Z" /><path d="M12 9v5M12 17h.01" /></svg><p>Use the exact origin shown in Settings. It limits Ollama access to Pagenova rather than every browser extension.</p></div>
+          </section>
+
+          <section class="content-section article-section" id="chat" data-search="chat send stop stream history follow up messages new conversation theme keyboard enter shift enter">
+            <div class="section-heading"><p class="section-number">03</p><div><h2>Chat and history</h2><p>Choose a provider and model in the header, write a question, then send it. Responses stream as they are generated.</p></div></div>
+            <div class="feature-list"><article><h3>Send and stop</h3><p>Press <kbd>Enter</kbd> to send or <kbd>Shift</kbd> + <kbd>Enter</kbd> for a new line. While a response streams, Send changes to Stop.</p></article><article><h3>Follow-up questions</h3><p>Pagenova sends recent conversation turns so questions such as “expand the second point” retain the chat’s subject.</p></article><article><h3>History</h3><p>The clock opens saved conversations. Reopen, delete, or export the current conversation as Markdown.</p></article></div>
+          </section>
+
+          <section class="content-section article-section" id="context" data-search="context tabs selected text highlight paragraph sources RAG retrieved excerpts full page documents PDF DOCX CSV text files">
+            <div class="section-heading"><p class="section-number">04</p><div><h2>Give Pagenova the right context</h2><p>Context is included only when you ask. It is data for the model, not an instruction that overrides your question.</p></div></div>
+            <div class="context-grid">
+              <article class="surface-card"><span class="card-label">Fastest</span><h3>Selected text</h3><p>Highlight text on the active normal webpage. When you send, Pagenova reads that selection only and adds it as <b>Selected text</b> for that answer.</p><p class="muted">It does not monitor selections as you browse. Select the paragraph first, then type and send your question.</p></article>
+              <article class="surface-card"><span class="card-label">Across pages</span><h3>Open tabs</h3><p>Open the <b>+</b> menu, consent once to let Pagenova read open-tab titles and URLs, then choose one or more normal webpages.</p><p class="muted">Tabs are read on demand. Pagenova does not run a persistent content script on every page you visit.</p></article>
+              <article class="surface-card"><span class="card-label">Your files</span><h3>Documents</h3><p>Attach PDF, DOCX, TXT, Markdown, CSV, JSON, or common code files from the <b>+</b> menu. Attachments remain usable in follow-up turns in the same conversation.</p><p class="muted">Legacy binary <code>.doc</code> files are not supported.</p></article>
+            </div>
+            <div class="status-reference"><h3>What the context status means</h3><dl><dt>Using full page context</dt><dd>The selected pages and files fit in the model prompt, so they were included directly.</dd><dt>Retrieved excerpts</dt><dd>The content was large. Pagenova chunked it, embedded it, and supplied excerpts most related to your question.</dd><dt>Indexing context</dt><dd>Pagenova is preparing longer content for retrieval. Wait for it to finish before asking a question that depends on it.</dd></dl></div>
+          </section>
+
+          <section class="content-section article-section" id="vision" data-search="vision images screenshot camera capture visible tab active tab all urls permission attach paste drag image moondream llava protected page">
+            <div class="section-heading"><p class="section-number">05</p><div><h2>Images and screenshots</h2><p>Use a vision-capable model for image questions. Pagenova warns you before sending an image to a model that does not support images.</p></div></div>
+            <div class="split-grid"><div class="surface-card"><h3>Attach an image</h3><ul><li>Choose an image in the <b>+</b> menu.</li><li>Paste an image from the clipboard.</li><li>Drag an image onto the panel.</li><li>Use <b>From this page</b> or right-click an image and choose <b>Ask AI about this image</b>.</li></ul></div><div class="surface-card"><h3>Capture a screenshot</h3><ol><li>Open the normal webpage you want to capture.</li><li>Open Pagenova, then choose <b>Screenshot</b>.</li><li>Allow optional screenshot access when the browser asks.</li></ol><p class="muted">Pagenova cannot capture browser-internal pages, extension pages, or other protected tabs. It never captures a tab automatically.</p></div></div>
+            <div class="callout note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 10v6M12 7h.01" /></svg><p>For Ollama, Pagenova checks model capabilities through Ollama’s model details and falls back to a conservative model-name check only when capability metadata is unavailable.</p></div>
+          </section>
+
+          <section class="content-section article-section" id="search" data-search="web search internet globe duckduckgo tavily search provider api key privacy results sources">
+            <div class="section-heading"><p class="section-number">06</p><div><h2>Web search</h2><p>Use the globe button when your question needs information beyond your current context.</p></div></div>
+            <div class="feature-list two-columns"><article><h3>DuckDuckGo</h3><p>The default. It is keyless and returns web results that Pagenova adds as context for the answer.</p></article><article><h3>Tavily</h3><p>Optional. Add a Tavily API key in Settings for LLM-oriented results and an extracted answer.</p></article><article><h3>Works with local models</h3><p>An Ollama model can stay local while an enabled search sends the question to the selected search provider.</p></article><article><h3>Sources stay visible</h3><p>Expand the Sources line under an answer to see the tabs, documents, selected text, or web results supplied for that turn.</p></article></div>
+          </section>
+
+          <section class="content-section article-section" id="providers" data-search="providers models openai anthropic claude google gemini deepseek openrouter groq other compatible api key vision">
+            <div class="section-heading"><p class="section-number">07</p><div><h2>Providers and models</h2><p>Open Settings from the gear icon to save credentials. Pagenova only shows a cloud provider in the chat menu after its key has been saved.</p></div></div>
+            <div class="table-wrap"><table><thead><tr><th>Provider</th><th>What you need</th><th>Notes</th></tr></thead><tbody><tr><td>Ollama</td><td>Local server and model</td><td>No API key. Default address: <code>http://localhost:11434</code>.</td></tr><tr><td>OpenAI</td><td>API key</td><td>Select a chat model after saving the key.</td></tr><tr><td>Anthropic</td><td>API key</td><td>Claude models are supported directly.</td></tr><tr><td>Google Gemini</td><td>API key</td><td>Gemini models are supported directly.</td></tr><tr><td>Other compatible</td><td>HTTPS OpenAI-compatible URL and API key</td><td>Use for DeepSeek, OpenRouter, Groq, self-hosted vLLM, LM Studio, and similar services. HTTP is allowed only for localhost.</td></tr></tbody></table></div>
+            <p class="muted">API keys stay only for the current browser session and are sent only to the provider selected for a request.</p>
+          </section>
+
+          <section class="content-section article-section" id="privacy" data-search="privacy permissions API keys storage data host permissions active tab screenshot extension security local embeddings analytics">
+            <div class="section-heading"><p class="section-number">08</p><div><h2>Privacy and permissions</h2><p>Pagenova does not add analytics or telemetry. It uses browser permissions to perform the action you request.</p></div></div>
+            <div class="privacy-grid"><article><h3>Stored locally</h3><p>Settings, conversation history, and retrieval data stay in browser storage. API keys stay only for the current browser session.</p></article><article><h3>Sent only on request</h3><p>Chosen context and your question go to the selected model provider when you send a message. Web search sends your query only while the globe toggle is on.</p></article><article><h3>Page access</h3><p>Tab text and page images are extracted on demand for tabs you choose. Pagenova does not maintain a persistent content script.</p></article><article><h3>Screenshot permission</h3><p>Optional screenshot access is requested when you first choose Screenshot. It lets Pagenova capture a normal active webpage after a tab switch.</p></article></div>
+            <p>Read the complete <a href="privacy.html">privacy policy</a>.</p>
+          </section>
+
+          <section class="content-section article-section" id="troubleshooting" data-search="troubleshooting error 403 401 screenshot capture context ollama CORS embedding model unable failed provider">
+            <div class="section-heading"><p class="section-number">09</p><div><h2>Troubleshooting</h2><p>Start with the error text in Pagenova. The fixes below cover the common setup failures.</p></div></div>
+            <div class="troubleshooting-list"><details open><summary>Ollama pull or embeddings return <code>403</code></summary><p>Copy the exact <code>OLLAMA_ORIGINS</code> command from Settings, then restart Ollama. See <a href="#ollama">Set up Ollama</a>.</p></details><details><summary>A cloud provider returns <code>401</code></summary><p>Save the correct API key in Settings. For Other compatible, also verify the HTTPS base URL. The provider remains hidden until its key is saved.</p></details><details><summary>“Pagenova cannot capture this tab”</summary><p>Switch to a normal <code>http</code> or <code>https</code> webpage. Browser pages and extension pages are protected and cannot be captured. Choose Screenshot again and accept the permission prompt if it appears.</p></details><details><summary>Context is missing or shows zero sources</summary><p>For tab context, choose the page through the <b>+</b> menu. For selected text, highlight it on the active normal webpage immediately before sending. A browser-internal page cannot provide either kind of context.</p></details><details><summary>Retrieved answers became weak after switching embedding backends</summary><p>Existing chunks may have a different embedding dimension. Re-upload the documents or clear stored data to re-index them with the current backend.</p></details><details><summary>An image cannot be sent to the selected model</summary><p>Choose a vision-capable model. Pagenova checks Ollama model capabilities when it can; other providers use their supported model families.</p></details></div>
+          </section>
+
+          <section class="content-section closing-section" data-search="more help issue feedback contribute docs"><div><p class="eyebrow"><span></span> Still need help?</p><h2>Use the technical reference for implementation details.</h2><p>It documents the architecture, message protocol, RAG pipeline, testing, release checks, and contribution workflow.</p></div><a class="button primary" href="../README.md">Open technical reference <span aria-hidden="true">→</span></a></section>
+        </main>
+        <footer><span>© Pagenova</span><span>Browser-native AI assistance</span><a href="#overview">Back to top ↑</a></footer>
+      </div>
+    </div>
+  </body>
+</html>

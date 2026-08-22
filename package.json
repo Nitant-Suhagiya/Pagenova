@@ -1,0 +1,54 @@
+{
+  "name": "browser-ai-assistant",
+  "private": true,
+  "version": "0.1.9",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && node scripts/fix-loader.js && node scripts/verify-dist.js",
+    "verify:dist": "node scripts/verify-dist.js",
+    "test": "vitest run",
+    "lint": "oxlint src",
+    "preview": "vite preview"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "overrides": {
+    "@huggingface/transformers": {
+      "onnxruntime-node": "$onnxruntime-node",
+      "sharp": "$sharp"
+    }
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.2.0",
+    "idb": "^8.0.3",
+    "mammoth": "^1.12.1",
+    "onnxruntime-node": "file:stubs/onnxruntime-node",
+    "pdfjs-dist": "^6.2.108",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-markdown": "^10.1.0",
+    "rehype-highlight": "^7.0.2",
+    "sharp": "file:stubs/sharp"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.7.1",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/chrome": "^0.2.6",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "autoprefixer": "^10.5.4",
+    "fake-indexeddb": "^6.2.5",
+    "jsdom": "^29.1.1",
+    "oxlint": "^1.75.0",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^3.4.10",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.11"
+  }
+}

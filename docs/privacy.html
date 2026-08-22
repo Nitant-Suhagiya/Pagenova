@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pagenova privacy policy." />
+    <title>Pagenova privacy policy</title>
+    <link rel="stylesheet" href="assets/docs.css" />
+    <script defer src="assets/docs.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to privacy policy</a>
+    <div class="site-shell">
+      <aside class="sidebar" id="site-nav" aria-label="Documentation navigation">
+        <a class="brand" href="index.html#overview" aria-label="Pagenova documentation home"><img class="brand-logo" src="assets/pagenova-logo.png" alt="" /></a>
+        <p class="sidebar-kicker">Documentation</p>
+        <nav>
+          <p class="nav-label">Pagenova</p>
+          <a href="index.html#overview">Overview</a><a href="index.html#install">Get started</a><a href="index.html#context">Context and files</a><a href="index.html#vision">Images and screenshots</a><a href="index.html#providers">Providers</a>
+          <p class="nav-label">Reference</p>
+          <a href="privacy.html" aria-current="page">Privacy policy</a><a href="support.html">Support</a>
+        </nav>
+        <div class="sidebar-footer"><a href="privacy.html">Privacy policy</a><a href="support.html">Support</a></div>
+      </aside>
+      <div class="content-shell">
+        <header class="topbar">
+          <button class="icon-button nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open documentation navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg></button>
+          <div class="topbar-meta"><span class="status-dot" aria-hidden="true"></span> Pagenova</div>
+          <div class="search-wrap"><label class="sr-only" for="docs-search">Search this policy</label><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="m16 16 4 4" /></svg><input id="docs-search" type="search" placeholder="Search this policy" autocomplete="off" aria-controls="search-results" aria-expanded="false" /><kbd>/</kbd><div class="search-results" id="search-results" role="listbox" aria-label="Privacy policy search results" hidden></div></div>
+          <button class="icon-button theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg></button>
+        </header>
+        <main id="main-content">
+          <section class="hero legal-hero content-section" id="policy" data-search="privacy policy data storage provider API keys browser session history page context screenshots web search permissions">
+            <div class="eyebrow"><span></span> Pagenova</div><h1>Privacy policy</h1><p class="lede"><strong>Effective date:</strong> August 2026</p><p class="lede">Pagenova is a browser extension that answers questions with AI models. You can optionally include tabs, documents, selected text, screenshots, and images as context. This policy explains what the extension stores, reads, and sends.</p>
+          </section>
+          <article class="legal-copy" data-search="stored locally history retrieval API keys chrome storage session browser data">
+            <h2>Data stored on your device</h2>
+            <ul>
+              <li>Settings are stored in your browser's <code>chrome.storage.local</code>. API keys are stored only in <code>chrome.storage.session</code>, which Chrome clears when the browser restarts. They remain on your device except when an API key is sent to the provider you selected.</li>
+              <li>Chat history and document or tab index data are stored in IndexedDB (<code>pagenova-history</code> and <code>pagenova-rag</code>) on your device.</li>
+              <li>After you allow Page Context, Pagenova reads open-tab titles and URLs in memory to show the tab picker. It does not store or send them as browsing history.</li>
+              <li>The optional in-browser embedding model downloads from Hugging Face on first use and is cached locally. Text used to make embeddings stays on your device.</li>
+              <li>Clear stored data in Settings removes local and session data, including history and retrieval data.</li>
+            </ul>
+          </article>
+          <article class="legal-copy" data-search="third parties providers Ollama OpenAI Anthropic Gemini compatible endpoint prompt page document image web search DuckDuckGo Tavily">
+            <h2>Data sent to third parties</h2><p>Pagenova sends data outside your device only when you start an action that uses an external service.</p>
+            <ul>
+              <li>Your prompt, together with any page text, selected text, document, or image you add, is sent to the AI provider you choose: a local Ollama server, OpenAI, Anthropic, Google Gemini, or an OpenAI-compatible endpoint you configure. To answer a follow-up about an image, Pagenova may send the most recent image attachment again within that conversation.</li>
+              <li>If you turn on web search, Pagenova sends your question to DuckDuckGo or Tavily. For a follow-up such as “search it,” it also sends up to two recent user questions so the search provider can identify the subject. This applies to a local Ollama model too.</li>
+            </ul>
+            <div class="surface-card"><h3>Limited use</h3><p>Pagenova does not sell user data, use it for advertising, or give people access to it. It uses page content only to provide the context feature you selected, consistent with the Chrome Web Store User Data Policy's Limited Use requirements.</p></div>
+          </article>
+          <article class="legal-copy" data-search="does not collect analytics telemetry tracking browser history selected text">
+            <h2>What Pagenova does not collect</h2><ul><li>Pagenova does not collect analytics, telemetry, crash reports, or tracking data.</li><li>It does not collect account, identity, or browsing-history data beyond the open-tab titles and URLs described above.</li><li>It does not send page text or images unless you select a tab as context, highlight text and send a question, or attach an image.</li></ul>
+          </article>
+          <article class="legal-copy" data-search="permissions host access http https screenshot optional all sites active tab extraction">
+            <h2>Permissions</h2><p>Pagenova requests host access for <code>http://*/*</code> and <code>https://*/*</code> so it can ground an answer in any tab you choose and fetch images you right-click or add from the current page. It reads page text and images on demand. The extension does not run a persistent content script on every page. It injects an extraction function only after you select a tab as context or send a question with a page selection, then discards it. Pagenova uses host access to the selected AI provider or local Ollama server only to make the request you initiated.</p><p>When you click Screenshot, Pagenova may ask for optional all-sites screenshot access. If you allow it, the extension can capture the currently active normal webpage after you switch tabs while the side panel stays open. It never captures tabs automatically, and it sends a screenshot to a provider only when you attach it and send a message.</p><p>These permissions are used solely for the features described above.</p>
+          </article>
+          <section class="closing-section" data-search="contact support github issue"><div><p class="eyebrow"><span></span> Need help?</p><h2>Questions about privacy?</h2><p>Open a support issue and include only the information needed to reproduce the problem.</p></div><a class="button primary" href="support.html">Get support <span aria-hidden="true">→</span></a></section>
+        </main>
+        <footer><span>© 2026 Pagenova</span><span><a href="index.html">Documentation</a> · <a href="support.html">Support</a></span></footer>
+      </div>
+    </div>
+  </body>
+</html>
