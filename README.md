@@ -14,9 +14,10 @@ Pagenova is open source under the [MIT License](LICENSE). Contributions are
 welcome, whether you are fixing a bug, improving a provider integration, or
 making the extension easier to use.
 
-> **User documentation:** the static documentation source lives in
-> [docs/index.html](docs/index.html). GitHub Pages can publish `main/docs` when
-> it is enabled in the repository settings.
+> **User documentation:** [guide](https://nitant-suhagiya.github.io/pagenova/),
+> [privacy policy](https://nitant-suhagiya.github.io/pagenova/privacy.html), and
+> [support](https://nitant-suhagiya.github.io/pagenova/support.html). Source:
+> [docs/index.html](docs/index.html).
 
 ---
 
