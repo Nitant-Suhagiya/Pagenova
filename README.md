@@ -1,6 +1,18 @@
-# Pagenova
+<p align="center">
+  <h1 align="center">Pagenova</h1>
+</p>
 
-A browser-native AI assistant (Chrome extension, Manifest V3) that grounds chat
+<p align="center">
+  <a href="https://nitant-suhagiya.github.io/Pagenova/">Documentation</a>
+</p>
+
+<p align="center">
+  <a href="https://chromewebstore.google.com/detail/pagenova/dhjffcoeipgjhbmhcaheciblafmglafj">
+    <img alt="Available in the Chrome Web Store" src="https://developer.chrome.com/static/docs/webstore/branding/image/UV4C4ybeBTsZt43U4xis.png" width="248" />
+  </a>
+</p>
+
+An open-source browser-native AI assistant (Chrome extension, Manifest V3) that grounds chat
 in your open tabs, uploaded documents, and images, using either a **local
 [Ollama](https://ollama.com) model** (nothing leaves your machine) or a **cloud
 provider** (OpenAI, Anthropic, Google Gemini, or any OpenAI-compatible
@@ -23,37 +35,43 @@ making the extension easier to use.
 
 ## Table of contents
 
-1. [Features](#features)
-2. [Requirements](#requirements)
-3. [Quickstart](#quickstart)
-4. [Build & verify](#build--verify)
-5. [Setup](#setup)
-   - [Ollama (local models)](#ollama-local-models)
-   - [Cloud providers](#cloud-providers)
-   - [Embedding backends](#embedding-backends)
-6. [Usage guide](#usage-guide)
-   - [Chat](#chat)
-   - [Page & tab context](#page--tab-context)
-   - [Documents (RAG)](#documents-rag)
-   - [Images & vision](#images--vision)
-   - [Web search](#web-search)
-   - [History](#history)
-7. [Configuration reference](#configuration-reference)
-8. [Architecture](#architecture)
-   - [High-level flow](#high-level-flow)
-   - [Component breakdown](#component-breakdown)
-   - [Message protocol](#message-protocol)
-   - [RAG internals](#rag-internals)
-9. [Providers](#providers)
-10. [Security & privacy](#security--privacy)
-11. [Project structure](#project-structure)
-12. [Development](#development)
-    - [Scripts](#scripts)
-    - [Tests](#tests)
-13. [Contributing](#contributing)
-14. [Manual QA matrix](#manual-qa-matrix)
-15. [Troubleshooting](#troubleshooting)
-16. [Roadmap](#roadmap)
+- [Table of contents](#table-of-contents)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Quickstart](#quickstart)
+- [Build \& verify](#build--verify)
+- [Setup](#setup)
+  - [Ollama (local models)](#ollama-local-models)
+  - [Cloud providers](#cloud-providers)
+  - [Embedding backends](#embedding-backends)
+- [Usage guide](#usage-guide)
+  - [Chat](#chat)
+  - [Page \& tab context](#page--tab-context)
+  - [Documents (RAG)](#documents-rag)
+  - [Images \& vision](#images--vision)
+  - [Web search](#web-search)
+  - [History](#history)
+- [Configuration reference](#configuration-reference)
+  - [System prompt](#system-prompt)
+- [Architecture](#architecture)
+  - [High-level flow](#high-level-flow)
+  - [Component breakdown](#component-breakdown)
+  - [Message protocol](#message-protocol)
+  - [RAG internals](#rag-internals)
+- [Providers](#providers)
+- [Security \& privacy](#security--privacy)
+- [Project structure](#project-structure)
+- [Development](#development)
+  - [Scripts](#scripts)
+  - [CI](#ci)
+  - [Tests](#tests)
+- [Contributing](#contributing)
+- [Manual QA matrix](#manual-qa-matrix)
+- [Troubleshooting](#troubleshooting)
+- [Roadmap](#roadmap)
+  - [Next up](#next-up)
+  - [Later](#later)
+- [License](#license)
 
 ---
 
@@ -110,8 +128,9 @@ npm install
 npm run build          # outputs to dist/
 ```
 
-Install Pagenova from the Chrome Web Store, then pin it and click its toolbar
-icon to open the side panel.
+Install Pagenova from the
+[Chrome Web Store](https://chromewebstore.google.com/detail/pagenova/dhjffcoeipgjhbmhcaheciblafmglafj),
+then pin it and click its toolbar icon to open the side panel.
 
 If you want a local model, see [Ollama setup](#ollama-local-models) before your
 first message. For cloud, paste a key in **Settings** → **Cloud providers**.
